@@ -9,9 +9,20 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <!-- It is recommended to use Java 8 or higher with Apache Calcite -->
+        <maven.compiler.source>1.8</maven.compiler.source> <!-- Adjust if using a different version -->
+        <maven.compiler.target>1.8</maven.compiler.target> <!-- Adjust if using a different version -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <calcite.version>1.36.0</calcite.version> <!-- Apache Calcite version -->
     </properties>
 
+    <dependencies>
+        <!-- Apache Calcite core -->
+        <dependency>
+            <groupId>org.apache.calcite</groupId>
+            <artifactId>calcite-core</artifactId>
+            <version>1.36.0</version>
+        </dependency>
+
+    </dependencies>
 </project>
