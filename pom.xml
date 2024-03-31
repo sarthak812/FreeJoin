@@ -24,5 +24,25 @@
             <version>1.36.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.duckdb</groupId>
+            <artifactId>duckdb_jdbc</artifactId>
+            <version>0.10.0</version>
+        </dependency>
+
+        <!-- SLF4J API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.36</version> <!-- or the latest version -->
+        </dependency>
+
+        <!-- Logback (or another logging framework) -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.5.3</version> <!-- or the latest version -->
+        </dependency>
+
     </dependencies>
 </project>
