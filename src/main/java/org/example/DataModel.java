@@ -7,31 +7,19 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DataModel {
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        Connection conn = null;
-        Statement stmt = null;
-        ResultSet rs = null;
+    public static void main(String[] args) {
+        // Try-with-resources statement to ensure proper closing of resources
+        try (Connection conn = DriverManager.getConnection("jdbc:duckdb:");
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT 42")) {
 
-        Class.forName("org.duckdb.DuckDBDriver");
-        conn = DriverManager.getConnection("jdbc:duckdb:");
-        stmt = conn.createStatement();
-        rs = stmt.executeQuery("SELECT 42");
-
-        // Process the ResultSet here
-        while (rs.next()) {
-            int result = rs.getInt(1);
-            System.out.println("Result: " + result);
-        }
-
-        // Close resources in the reverse order of their creation
-        if (rs != null) {
-            rs.close();
-        }
-        if (stmt != null) {
-            stmt.close();
-        }
-        if (conn != null) {
-            conn.close();
+            // Process the ResultSet
+            while (rs.next()) {
+                int result = rs.getInt(1);
+                System.out.println("Result: " + result);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle or log the exception more appropriately
         }
     }
 }
