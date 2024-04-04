@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 
 public class DataModel {
     public static void main(String[] args) {
-        String dbUrl = "jdbc:duckdb:src/tables.duckdb";
+        String dbUrl = "jdbc:duckdb:tables.duckdb"; //Location of duckdb database
         try (Connection conn = DriverManager.getConnection(dbUrl)) {
             // Define table schemas
             // title.akas
