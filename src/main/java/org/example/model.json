@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "defaultSchema": "IMDB",
+  "schemas": [
+    {
+      "type": "custom",
+      "name": "IMDB",
+      "factory": "org.apache.calcite.adapter.jdbc.JdbcSchema$Factory",
+      "operand": {
+        "jdbcDriver": "org.duckdb.DuckDBDriver",
+        "jdbcUrl": "jdbc:duckdb:src/tables.duckdb",
+        "jdbcUser": "",
+        "jdbcPassword": ""
+      }
+    }
+  ]
+}
