@@ -4,7 +4,7 @@
 INSTALL tpch;
 ```
 
-If the file does not exist it will be created
+If the file does not exist it will be created:
 ```console
 .open my_tpch_database.duckdb
 ```
@@ -19,4 +19,8 @@ CALL dbgen(sf=1);
 
 ```console 
 show tables;
+```
+To display the 22 queries of TPCH:
+```console
+FROM tpch_queries()
 ```
