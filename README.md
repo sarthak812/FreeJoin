@@ -22,5 +22,5 @@ show tables;
 ```
 To display the 22 queries of TPCH:
 ```console
-FROM tpch_queries()
+FROM tpch_queries();
 ```
