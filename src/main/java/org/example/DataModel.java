@@ -176,4 +176,22 @@ public class DataModel {
         System.err.println("VendorError: " + e.getErrorCode());
         e.printStackTrace();
     }
+
+    
+    // Function to fetch query plan for a given query using EXPLAIN, which would be directed to Apache
+    //public static void getQueryPlan(Connection conn, String query) throws SQLException {
+        //String explainQuery = "EXPLAIN " + query;
+        //try (Statement stmt = conn.createStatement();
+             //ResultSet rs = stmt.executeQuery(explainQuery)) {
+
+            // Display query plan
+            //System.out.println("Query Plan:");
+            //while (rs.next()) {
+                System.out.println(rs.getString(1));
+           // }
+        //}
+    //}
+//needs an appropriate call 
+  
+
 }
